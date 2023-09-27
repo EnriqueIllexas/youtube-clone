@@ -39,11 +39,13 @@ body{
     height: 100vh;
     background-color: var(--fondo);
     padding: 20px;
+    position:fixed;
 }
 .seccion-prewiew{
     width: 82vw;
     height: 91vh;
     background-color: var(--fondo);
+    margin-left: 20%;
 }
 .seccion-recomend{
     width: 100%;
@@ -192,6 +194,7 @@ body{
 }
 /*--bara lateral---*/
 .seccion-navbar{
+
     padding: 0;
 }
 .seccion-navbar ul{
