@@ -1,0 +1,8 @@
+/*navbar ASIDE*/
+.seccion-aside--navbar{
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--fondo);
+    z-index: 1;
+    position: absolute;
+}

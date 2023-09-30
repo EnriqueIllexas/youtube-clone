@@ -7,13 +7,15 @@
     <link rel="stylesheet" href="main.css">
     <link rel="stylesheet" href="./navbar.css">
     <link rel="icon" href="logo.ico">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
 </head>
 <body>
     <nav class="navbar">
-        <div class="toggle-btn">
-            <span></span>
-            <span></span>
-            <span></span>
+        <div class="toggle-btn inactive" id="openNavabr">
+           <img src="./icons/menu.svg" alt="menu" >
         </div>
         <img src="img/yt_logo_rgb_dark.png" class="logo" alt="">
         
@@ -50,7 +52,7 @@
             <div class="line-bar"></div>
                 
            
-            <ul>
+            <ul class="barra-lateral--medium">
                 <li>
                     <img src="./icons/history.svg" alt="">
                     <p>Historial</p>
@@ -126,6 +128,9 @@
                     </li>
                 </ul>
             </ul>
+        </section>
+        <section class="seccion-aside--navbar inactive animate__animated animate__fadeInLeft">
+            
         </section>
         <section class="seccion-prewiew">
             <section class="seccion-recomend">
@@ -246,5 +251,6 @@
         </section>
     </section>
     <script src="main.js"></script>
+    <script src="navbar.js"></script>
 </body>
 </html>
