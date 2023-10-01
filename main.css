@@ -13,6 +13,9 @@
     --gris-min: #bbbbbb;
     --white: #fff;
 }
+html{
+    width: 100%;
+}
 p{
     color: var(--white);
     font-family: Arial, Helvetica, sans-serif;
@@ -50,7 +53,7 @@ body{
     position:fixed;
 }
 .seccion-prewiew{
-    width: 82vw;
+    width: 78vw;
     height: 91vh;
     background-color: var(--fondo);
     margin-left: 20%;
@@ -62,6 +65,7 @@ body{
     display: flex;
     gap: 10px;
     overflow:hidden;
+    margin-top: 10px;
 }
 .seccion-recomend .button{
     margin-top: 5px;
@@ -236,56 +240,53 @@ body{
     grid-template-columns: repeat(
         auto-fit,
         minmax(
-            300px,
+            280px,
             1fr
         )
         );
-    gap: 10px 0px;
+    gap: 12px;
+    align-items: center;
+    align-self: center;
+    justify-content: center;
 }
-.seccion-video img{
-    width: 90%;
+.video-preview-info{
+    display: flex;
+    justify-content: center;
+}
+.preview-video{
+    border: 1px solid var(--white);
+    border-radius: 15px;
+}
+.imagen-video-preview{
+    width: 100%;
     height: 65%;
     border-radius: 15px;
     cursor: pointer;
     object-fit: cover;
 }
-.preview-video-class{
-    display: flex;
-}
-.preview-video-class img{
+.preview-video-primary img{
     width: 30px;
     height: 30px;
     border-radius: 50%;
     padding: 15px;
     cursor: pointer;
 }
-.preview-video-class p{
+.preview-video-secondary{
+    width: 80%;
+}
+.preview-video-secondary p:nth-child(1){
     font-weight: 200;
     font-size: 18px;
     white-space: nowrap;
     overflow: hidden;
     text-overflow:ellipsis;  
-    width: 75%;
+    width: 100%;
+    margin: 10px 0px 0px 0px;
 }
-.preview-video--seconday{
-    display: flex;
-    flex-direction: column;
-}   
-.preview-video--seconday p:nth-child(1){
-    color: var(--gris-min);
-    cursor: pointer;
-    margin: 2px 50px;
-    cursor: pointer;
-    transition: 1s;
-}
-.preview-video--seconday p:nth-child(1):hover{
-   color: var(--white);
-   transition: 1s;
-}
-.preview-video--seconday p:nth-child(2){
+.preview-video-secondary p:nth-child(2){
     color: var(--gris-plus);
     cursor: pointer;
-    margin: 2px 50px;
+    margin: 0;
 }
 @media (max-width: 450px) {
     .seccion-navbar{
@@ -300,9 +301,17 @@ body{
         align-items: center;
         align-self: center;
         margin: 0;
+        padding: 0;
     }
     .preview-video{
         margin-bottom: 30px;
+    }
+    .seccion-video{
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+        margin: 0;
     }
     .user-options{
         display: none;
@@ -312,6 +321,13 @@ body{
     }
 }
 @media(max-width: 550px){
+    .seccion-video{
+        display: grid;
+        place-items: center;
+    }
+    .preview-video{
+        width: 90%;
+    }
     .barra-lateral li img{
         padding: 10px;
     }
